@@ -1,7 +1,7 @@
 # Sitecore Experience Improvements
 
 # How this module can help you?
-Sitecore Experience Improvements (SXI) is a module designed to help to content editors, design editors with adding some missing functionalities which in our opinion can increase a productivity of users. 
+Sitecore Experience Improvements (SXI) is a module designed to help to content editors and design editors with adding some missing functionalities which in our opinion can increase a productivity of users. 
 
 # Current functionalities:
 - additional better visible bar with validation errors
