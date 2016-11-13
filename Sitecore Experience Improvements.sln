@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SXI.Foundation.Validation", "Foundation\SXI.Foundation.Validation\SXI.Foundation.Validation.csproj", "{4CFB6181-3A19-4804-A453-A379780B188C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{4776D489-7A4D-4616-B604-F6B423586B2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{3B674137-E89A-4942-955E-611DE4FF65E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{70AB1134-6320-4703-B3F7-C3DBC96FF0BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CFB6181-3A19-4804-A453-A379780B188C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CFB6181-3A19-4804-A453-A379780B188C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CFB6181-3A19-4804-A453-A379780B188C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CFB6181-3A19-4804-A453-A379780B188C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4CFB6181-3A19-4804-A453-A379780B188C} = {4776D489-7A4D-4616-B604-F6B423586B2A}
+	EndGlobalSection
+EndGlobal

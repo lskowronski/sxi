@@ -1,0 +1,11 @@
+﻿.sxiValidationErrorMessage {
+    margin-bottom: 10px; 
+    background: #DC291E; 
+    padding: 5px; 
+    color: #FFFFFF; 
+    font-weight: bolder; 
+    display: block;    
+}
+.sxiSectionHeaderWithValidationErrors{
+	background: #DC291E;
+}
