@@ -1,25 +1,36 @@
 var SXIUpdateHeader = function () {
-    jQuery('.sxiValidationErrorMessage').each(function () {
-        var sectionHeader = jQuery(this).parentsUntil('table.scEditorSectionPanel').parent();
-        if (!jQuery(sectionHeader).prev('div').hasClass('sxiSectionHeaderWithValidationErrors')) {
-            jQuery(sectionHeader).prev('div').addClass('sxiSectionHeaderWithValidationErrors');
+    $$('.scEditorSectionCaptionExpanded').each(function (element) {
+        if (jQuery(element).css('border-left-color') == 'rgb(220, 41, 30)') {
+            if (!jQuery(element).hasClass('sxiSectionHeaderWithValidationErrors')) {
+                jQuery(element).addClass('sxiSectionHeaderWithValidationErrors');
+            }
         }
     });
 }
 var SXIFoundationValidationObserver = new MutationObserver(function () {
-    $$('.scEditorFieldMarkerBarCellRed').each(function (element) {
-        var message = '<div class="sxiValidationErrorMessage">__error__</div>';
-        if (jQuery(element).parent().find('.sxiValidationErrorMessage').length < 1) {
-            jQuery('.sxiValidationErrorMessage').remove();
-            jQuery('.sxiSectionHeaderWithValidationErrors').removeClass('sxiSectionHeaderWithValidationErrors');
-            jQuery(element).parent().find('td:last').prepend(message.replace('__error__', jQuery(element).attr('title')));
+    $$('.scEditorSectionCaptionExpanded').each(function (element) {
+        if (jQuery(element).css('border-left-color') == 'rgb(220, 41, 30)') {
+            var message = '<div class="sxiValidationErrorMessage">__error__</div>';
+            var errorMessage = '';
+            if (jQuery(element).parent().find('.sxiValidationErrorMessage').length < 1) {
+                jQuery('.sxiValidationErrorMessage').remove();
+                jQuery('.sxiSectionHeaderWithValidationErrors').removeClass('sxiSectionHeaderWithValidationErrors');
+                if (jQuery(element).attr('title') != undefined) {
+                    errorMessage = jQuery(element).attr('title');
+                }
+                else {
+                    errorMessage = 'Validation Error Occured &darr;';
+                }
+                jQuery(element).parent().find('td:last').prepend(message.replace('__error__', errorMessage));
+            }
         }
-    });
-    $$('.scEditorFieldMarkerBarCell').each(function (element) {
-        if (jQuery(element).parent().find('.sxiValidationErrorMessage').length == 1) {
-            jQuery('.sxiValidationErrorMessage').remove();
-            jQuery('.sxiSectionHeaderWithValidationErrors').removeClass('sxiSectionHeaderWithValidationErrors');
+        else {
+            if (jQuery(element).parent().find('.sxiValidationErrorMessage').length == 1) {
+                jQuery('.sxiValidationErrorMessage').remove();
+                jQuery('.sxiSectionHeaderWithValidationErrors').removeClass('sxiSectionHeaderWithValidationErrors');
+            }
         }
+
     });
     SXIUpdateHeader();
 });
